@@ -1,0 +1,26 @@
+{
+  "name": "web-typescript-template",
+  "version": "1.0.0",
+  "description": "A template for a frontend with HTML and plain typescript",
+  "private": true,
+  "scripts": {
+    "dev": "npx tsc --watch",
+    "serve": "cd web-frontend && ws",
+    "build": "rm -rf js && npx tsc",
+    "test": "echo 'test'"
+  },
+  "keywords": [
+    "web",
+    "html",
+    "template",
+    "plain",
+    "typescript"
+  ],
+  "author": "Tino Steinort",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "local-web-server": "3.0.7",
+    "typescript": "3.7.2"
+  }
+}
