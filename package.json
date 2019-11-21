@@ -4,9 +4,11 @@
   "description": "A template for a frontend with HTML and plain typescript",
   "private": true,
   "scripts": {
-    "dev": "npx tsc --watch",
-    "serve": "cd web-frontend && ws",
-    "build": "rm -rf js && npx tsc",
+    "clean": "scripts/clean.sh",
+    "dev": "scripts/dev.sh",
+    "pack": "scripts/pack.sh",
+    "serve": "scripts/serve.sh",
+    "build": "scripts/build.sh",
     "test": "echo 'test'"
   },
   "keywords": [
@@ -14,13 +16,16 @@
     "html",
     "template",
     "plain",
-    "typescript"
+    "typescript",
+    "webpack"
   ],
   "author": "Tino Steinort",
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
     "local-web-server": "3.0.7",
-    "typescript": "3.7.2"
+    "typescript": "3.7.2",
+    "webpack": "4.41.2",
+    "webpack-cli": "3.3.10"
   }
 }
