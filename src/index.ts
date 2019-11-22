@@ -13,5 +13,5 @@ function updateTime() {
 
 function getTimeString() {
     const date = new Date();
-    return "# Time: " + date.toLocaleTimeString();
+    return "# Time: " + date.toLocaleTimeString() + " #";
 }

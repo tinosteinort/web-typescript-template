@@ -2,7 +2,7 @@
 
 set -e
 
-"./clean.sh"
+"./scripts/clean.sh"
 
 npx tsc
 npx webpack --config 'webpack.config.js'

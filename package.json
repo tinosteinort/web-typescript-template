@@ -5,10 +5,11 @@
   "private": true,
   "scripts": {
     "clean": "scripts/clean.sh",
-    "dev": "scripts/dev.sh",
-    "pack": "scripts/pack.sh",
-    "serve": "scripts/serve.sh",
     "build": "scripts/build.sh",
+    "tsc": "npx tsc --watch",
+    "pack": "npx webpack --watch --config 'webpack.config.js'",
+    "serve": "npx ws -d 'web-frontend'",
+    "dev": "npx concurrently \"npm:tsc\" \"npm:pack\" \"npm:serve\"",
     "test": "echo 'test'"
   },
   "keywords": [
@@ -23,6 +24,7 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
+    "concurrently": "^5.0.0",
     "local-web-server": "3.0.7",
     "typescript": "3.7.2",
     "webpack": "4.41.2",
