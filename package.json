@@ -5,11 +5,11 @@
   "private": true,
   "scripts": {
     "clean": "node 'scripts/clean.js'",
-    "build": "npm run clean && npx tsc && npx webpack --config 'webpack.config.js'",
-    "tsc": "npx tsc --watch",
-    "pack": "npx webpack --watch --config 'webpack.config.js'",
+    "tsc": "npx tsc",
+    "pack": "npx webpack --config 'webpack.config.js'",
+    "build": "npm run clean && npm run tsc && npm run pack",
     "serve": "npx ws -d 'web-frontend'",
-    "dev": "npx concurrently \"npm:tsc\" \"npm:pack\" \"npm:serve\"",
+    "dev": "npx concurrently \"npm run tsc -- --watch\" \"npm run pack -- --watch\" \"npm run serve\"",
     "test": "echo 'test'"
   },
   "keywords": [
