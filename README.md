@@ -1,6 +1,6 @@
 # Web Frontend Template With Plain Typescript
 
-This should be a minimalistic example for a web page with typescript.
+This is a example for a web page with typescript, but without angular.
 
 
 ## Development
@@ -8,21 +8,21 @@ This should be a minimalistic example for a web page with typescript.
 The typescript source is located in the `src` folder. The HTML source is in the
  `web-frontend` folder.
 
- __Attention: the `web-frontent/js` folder will be genereated. Dont't modify code manually.__
-
-To start development execute this command:
+To start development execute:
 ```
 npm run dev
 ```
+Now you can modify the `*.ts` files. They will be transpiled automatically.
 
 The local test webserver is reachable at `http://localhost:8000/`. You have to refresh
- the browser to execute the new transpiled code.
+ the browser by your own to execute the new transpiled code.
+
+ __Attention: the `web-frontent/js` and `build` folders will be genereated. Dont't modify code within manually.__
 
 
 ## Distributing
 
-The distributable folder is `web-frontend`. To get a clean folder with the newest 
- code, execute:
+The distributable folder is `web-frontend`. Before using, run:
 ```
 npm run build
 ```
