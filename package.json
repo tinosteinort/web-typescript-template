@@ -4,12 +4,12 @@
   "description": "A template for a frontend with HTML and plain typescript",
   "private": true,
   "scripts": {
-    "clean": "node 'scripts/clean.js'",
+    "clean": "node \"scripts/clean.js\"",
     "tsc": "npx tsc",
-    "pack": "npx webpack --config 'webpack.config.js'",
+    "pack": "npx webpack --config \"webpack.config.js\"",
     "build": "npm run clean && npm run tsc && npm run pack",
-    "serve": "npx ws -d 'web-frontend'",
-    "dev": "npx concurrently \"npm run tsc -- --watch\" \"npm run pack -- --watch\" \"npm run serve\"",
+    "serve": "npx ws -d \"web-frontend\"",
+    "dev": "npm run build && npx concurrently \"npm run tsc -- --watch\" \"npm run pack -- --watch\" \"npm run serve\"",
     "test": "echo 'test'"
   },
   "keywords": [
